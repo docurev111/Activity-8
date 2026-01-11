@@ -1,0 +1,77 @@
+.message-input {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: rgba(10, 15, 31, 0.55);
+  border-top: 1px solid rgba(255, 183, 3, 0.16);
+  transition: background 0.3s ease;
+}
+
+.dark-mode .message-input {
+  background: rgba(0, 0, 0, 0.55);
+  border-top-color: rgba(255, 183, 3, 0.16);
+}
+
+.message-input-field {
+  flex: 1;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid rgba(255, 183, 3, 0.22);
+  border-radius: 14px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s;
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.dark-mode .message-input-field {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 183, 3, 0.22);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.message-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.message-input-field:focus {
+  outline: none;
+  border-color: rgba(255, 183, 3, 0.55);
+  box-shadow: 0 0 0 4px rgba(255, 183, 3, 0.10);
+}
+
+.dark-mode .message-input-field:focus {
+  border-color: rgba(255, 183, 3, 0.55);
+}
+
+.send-button {
+  padding: 0.95rem 1.4rem;
+  background: rgba(255, 183, 3, 0.18);
+  color: rgba(255, 183, 3, 0.95);
+  border: 1px solid rgba(255, 183, 3, 0.42);
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.dark-mode .send-button {
+  background: rgba(255, 183, 3, 0.18);
+}
+
+.send-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 183, 3, 0.26);
+}
+
+.send-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

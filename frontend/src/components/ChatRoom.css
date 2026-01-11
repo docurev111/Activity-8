@@ -1,0 +1,70 @@
+.chat-room {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 15, 31, 0.38);
+  transition: background 0.3s ease;
+}
+
+.dark-mode .chat-room {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.chat-room.no-room-selected {
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  text-align: center;
+  padding: 2rem;
+}
+
+.dark-mode .chat-room.no-room-selected {
+  color: #666;
+}
+
+.chat-header {
+  padding: 1.1rem 1.4rem;
+  background: rgba(10, 15, 31, 0.82);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 183, 3, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.dark-mode .chat-header {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: rgba(255, 183, 3, 0.95);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.room-desc {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.typing-indicator {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  color: rgba(255, 183, 3, 0.85);
+  font-style: italic;
+  border-top: 1px solid rgba(255, 183, 3, 0.12);
+  font-family: 'Courier New', monospace;
+  background: rgba(10, 15, 31, 0.55);
+}
+
+.dark-mode .typing-indicator {
+  color: rgba(255, 183, 3, 0.85);
+  border-top-color: rgba(255, 183, 3, 0.12);
+}

@@ -1,0 +1,157 @@
+{
+  "info": {
+  "name": "Hive API",
+  "description": "REST API endpoints for the Hive application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Rooms",
+      "item": [
+        {
+          "name": "Get All Rooms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/rooms",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["rooms"]
+            },
+            "description": "Retrieve all chat rooms"
+          }
+        },
+        {
+          "name": "Get Room by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/rooms/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["rooms", "1"]
+            },
+            "description": "Retrieve a specific room by ID"
+          }
+        },
+        {
+          "name": "Create Room",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"General\",\n  \"description\": \"General discussion room\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/rooms",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["rooms"]
+            },
+            "description": "Create a new chat room"
+          }
+        },
+        {
+          "name": "Delete Room",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/rooms/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["rooms", "1"]
+            },
+            "description": "Delete a room by ID"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Messages",
+      "item": [
+        {
+          "name": "Get All Messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/messages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["messages"]
+            },
+            "description": "Retrieve all messages"
+          }
+        },
+        {
+          "name": "Get Messages by Room",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/messages/room/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["messages", "room", "1"]
+            },
+            "description": "Retrieve all messages for a specific room"
+          }
+        },
+        {
+          "name": "Create Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Hello, world!\",\n  \"roomId\": 1,\n  \"userId\": 1,\n  \"username\": \"John\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/messages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["messages"]
+            },
+            "description": "Create a new message"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": [""]
+        },
+        "description": "Check API status"
+      }
+    }
+  ]
+}
